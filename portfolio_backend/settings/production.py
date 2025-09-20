@@ -11,7 +11,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = config(
     'ALLOWED_HOSTS', 
-    default='localhost,127.0.0.1', 
+    default='dev-elaikim-back2.onrender.com', 
     cast=lambda v: [s.strip() for s in v.split(',')]
 )
 
