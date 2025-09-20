@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Django
+*.log
+*.pot
+*.pyc
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Virtual environment
+venv/
+ENV/
+env/
+.venv/
+venv2/
+.venv2/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pytest, coverage, etc.
+.coverage
+htmlcov/
+.tox/
+.pytest_cache/
+
+# Migrations cache (keep migration files themselves)
+*/migrations/__pycache__/
+
+# Node modules (if using React or similar in the same repo)
+node_modules/
+build/
+dist/
+
+# dotenv
+*.env
+.env.*

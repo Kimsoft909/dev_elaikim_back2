@@ -1,0 +1,59 @@
+# Web Framework & ASGI
+Django
+djangorestframework
+django-cors-headers
+daphne
+uvicorn[standard]
+gunicorn
+
+# Database & Connection Pooling
+psycopg2-binary
+# django-pgconnpool
+dj-database-url
+
+# Caching
+django-redis
+redis
+
+# Authentication & Security
+djangorestframework-simplejwt
+argon2-cffi
+
+# File Storage & Upload
+supabase
+python-multipart
+
+# PDF Generation
+reportlab
+weasyprint
+
+# Background Tasks
+celery[redis]
+
+# Environment & Configuration
+python-decouple
+django-extensions
+
+# Validation & Utilities
+django-phonenumber-field
+Pillow
+python-magic
+
+# Monitoring & Debugging
+sentry-sdk
+django-debug-toolbar
+
+# Date & Time
+python-dateutil
+
+# HTTP Client
+httpx
+
+# YAML Support
+PyYAML
+
+# Development
+ipython
+
+# System monitoring
+psutil

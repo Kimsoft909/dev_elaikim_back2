@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ cv_data.personal_info.full_name }} - CV</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            line-height: 1.7;
+            color: #2d3748;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fefefe;
+        }
+        .header {
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 30px;
+            margin-bottom: 40px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #1a202c;
+            font-weight: normal;
+            letter-spacing: 1px;
+        }
+        .header h2 {
+            margin: 15px 0;
+            font-size: 1.1em;
+            color: #4a5568;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .contact {
+            margin: 20px 0;
+            font-size: 0.95em;
+            color: #718096;
+        }
+        .section {
+            margin: 40px 0;
+        }
+        .section h3 {
+            color: #1a202c;
+            font-size: 1.2em;
+            font-weight: normal;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .experience-item, .education-item {
+            margin: 30px 0;
+            padding: 0;
+            border: none;
+        }
+        .position {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #2d3748;
+            margin-bottom: 3px;
+        }
+        .company {
+            color: #4a5568;
+            font-size: 1em;
+            margin-bottom: 5px;
+        }
+        .duration {
+            color: #a0aec0;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+        }
+        .skills-category {
+            margin: 20px 0;
+        }
+        .skills-category h4 {
+            color: #2d3748;
+            margin-bottom: 8px;
+            font-weight: bold;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .skills-list {
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+        ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        li {
+            margin: 8px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+        li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: #a0aec0;
+        }
+        p {
+            margin: 12px 0;
+            color: #4a5568;
+            font-size: 0.95em;
+        }
+        @media print {
+            body {
+                padding: 20px;
+                font-size: 11px;
+            }
+            .header h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>{{ cv_data.personal_info.full_name }}</h1>
+        <h2>{{ cv_data.personal_info.title }}</h2>
+        <div class="contact">
+            {{ cv_data.personal_info.email }} — {{ cv_data.personal_info.phone }} — {{ cv_data.personal_info.location }}
+        </div>
+    </div>
+    
+    <div class="section">
+        <h3>Summary</h3>
+        <p>{{ cv_data.personal_info.summary }}</p>
+    </div>
+    
+    {% if cv_data.experience %}
+    <div class="section">
+        <h3>Experience</h3>
+        {% for exp in cv_data.experience %}
+        <div class="experience-item">
+            <div class="position">{{ exp.position }}</div>
+            <div class="company">{{ exp.company }}</div>
+            <div class="duration">{{ exp.duration }}</div>
+            <p>{{ exp.description }}</p>
+            {% if exp.responsibilities %}
+            <ul>
+                {% for responsibility in exp.responsibilities %}
+                <li>{{ responsibility }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if cv_data.skills %}
+    <div class="section">
+        <h3>Skills</h3>
+        {% for skill_category in cv_data.skills %}
+        <div class="skills-category">
+            <h4>{{ skill_category.category }}</h4>
+            <div class="skills-list">{{ skill_category.items|join:" • " }}</div>
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+    
+    {% if cv_data.education %}
+    <div class="section">
+        <h3>Education</h3>
+        {% for edu in cv_data.education %}
+        <div class="education-item">
+            <div class="position">{{ edu.degree }}</div>
+            <div class="company">{{ edu.institution }}</div>
+            <div class="duration">{{ edu.year }}</div>
+            {% if edu.details %}
+            <p>{{ edu.details }}</p>
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,137 @@
+# CV/Resume Data Configuration
+summary: |
+  Passionate Full Stack Developer with 5+ years of experience in healthcare technology solutions.
+  Specialized in building secure, scalable web applications with React, Django, and Rust.
+  Strong expertise in patient management systems, medical data analytics, and HIPAA-compliant platforms.
+
+personal_info:
+  full_name: "Eliakim Mwita"
+  title: "Full Stack Developer & Healthcare Technology Specialist"
+  email: "hello@eliakim.dev"
+  phone: "+254 700 000 000"
+  location: "Nairobi, Kenya"
+  linkedin: "https://linkedin.com/in/eliakimmwita"
+  github: "https://github.com/eliakimmwita"
+  website: "https://eliakim.dev"
+  
+skills:
+  frontend:
+    - "React.js & Next.js"
+    - "TypeScript & JavaScript"
+    - "Tailwind CSS & SCSS"
+    - "Vue.js & Nuxt.js"
+    - "React Native"
+  
+  backend:
+    - "Rust & Actix Web"
+    - "Python & Django"
+    - "Node.js & Express"
+    - "PostgreSQL & MySQL"
+    - "Redis & MongoDB"
+  
+  cloud_devops:
+    - "AWS & Azure"
+    - "Docker & Kubernetes"
+    - "CI/CD Pipelines"
+    - "Microservices Architecture"
+    - "Serverless Functions"
+  
+  healthcare_tech:
+    - "HIPAA Compliance"
+    - "HL7 & FHIR Standards"
+    - "Medical Device Integration"
+    - "Electronic Health Records"
+    - "Telemedicine Platforms"
+
+experience:
+  - company: "MedTech Solutions Ltd"
+    position: "Senior Full Stack Developer"
+    location: "Nairobi, Kenya"
+    duration: "Jan 2022 - Present"
+    description: 
+      - "Leading full-stack development initiatives for healthcare platforms, focusing on scalable Rust backends and secure patient data systems while mentoring junior developers."
+    achievements:
+      - "Led development of patient management system serving 50+ clinics"
+      - "Reduced system response times by 60% through Rust backend optimization"
+      - "Implemented HIPAA-compliant data handling for 100K+ patient records"
+      - "Mentored 3 junior developers and established code review processes"
+  
+  - company: "HealthCare Innovations"
+    position: "Full Stack Developer"
+    location: "Remote"
+    duration: "Mar 2020 - Dec 2021"
+    description: 
+      - "Designed and built full-stack telemedicine solutions, integrating real-time communication and prescription management systems to improve remote healthcare delivery."
+    achievements:
+      - "Built telemedicine platform handling 1000+ daily consultations"
+      - "Developed prescription management system with drug interaction checks"
+      - "Integrated WebRTC for real-time video consultations"
+      - "Achieved 99.9% uptime through robust error handling and monitoring"
+  
+  - company: "Digital Health Solutions"
+    position: "Frontend Developer"
+    location: "Nairobi, Kenya"
+    duration: "Jun 2019 - Feb 2020"
+    description: 
+      - "Developed responsive and user-friendly healthcare dashboards with real-time analytics, focusing on accessibility and clinical accuracy in UI/UX design."
+    achievements:
+      - "Created responsive medical dashboard with real-time analytics"
+      - "Improved user engagement by 40% through intuitive UI/UX design"
+      - "Implemented progressive web app features for offline functionality"
+      - "Collaborated with medical professionals to ensure clinical accuracy"
+
+education:
+  - institution: "University of Nairobi"
+    degree: "Bachelor of Science in Computer Science"
+    location: "Nairobi, Kenya"
+    duration: "2015 - 2019"
+    honors: "First Class Honors"
+    relevant_coursework:
+      - "Software Engineering"
+      - "Database Systems"
+      - "Web Development"
+      - "Data Structures & Algorithms"
+
+certifications:
+  - "AWS Certified Solutions Architect - Amazon Web Services (2023)"
+  - "HIPAA Compliance Certification - Healthcare Security Institute (2022)"
+  - "React Developer Certification - Meta (2021)"
+
+
+projects:
+  - name: "HealthTrack Pro"
+    description: "Comprehensive patient management system with real-time analytics"
+    technologies:
+      - "React"
+      - "Django"
+      - "PostgreSQL"
+      - "Redis"
+
+  - name: "PharmaCare API"
+    description: "High-performance medication tracking system"
+    technologies:
+      - "Rust"
+      - "Actix Web"
+      - "PostgreSQL"
+
+  - name: "MedTech Dashboard"
+    description: "Real-time healthcare data visualization platform"
+    technologies:
+      - "Next.js"
+      - "TypeScript"
+      - "Chart.js"
+
+languages:
+  - language: "English"
+    proficiency: "Native"
+  - language: "Swahili"
+    proficiency: "Native"
+  - language: "Spanish"
+    proficiency: "Conversational"
+
+interests:
+  - "Open Source Contributions"
+  - "Healthcare Technology Innovation"
+  - "Rust Programming Community"
+  - "Medical AI Research"
+  - "Tech Mentorship"
