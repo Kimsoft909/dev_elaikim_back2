@@ -7,13 +7,8 @@ from sentry_sdk.integrations.django import DjangoIntegration
 from sentry_sdk.integrations.celery import CeleryIntegration
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+# DEBUG = False
 
-ALLOWED_HOSTS = config(
-    'ALLOWED_HOSTS', 
-    default='dev-elaikim-back2.onrender.com', 
-    cast=lambda v: [s.strip() for s in v.split(',')]
-)
 
 # Security Settings
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
