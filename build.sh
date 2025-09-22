@@ -3,6 +3,9 @@ set -e  # Exit on any error
 
 echo "🚀 Starting Django build process..."
 
+# build.sh
+mkdir -p /var/log/portfolio_backend
+
 # Install Python dependencies
 echo "📦 Installing Python dependencies..."
 pip install -r requirements.txt
