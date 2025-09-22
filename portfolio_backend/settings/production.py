@@ -52,18 +52,18 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 # -------------------------------------------------------------------
 # Sentry error tracking
 # -------------------------------------------------------------------
-sentry_dsn = config('SENTRY_DSN', default=None)
-if sentry_dsn:
-    sentry_sdk.init(
-        dsn=sentry_dsn,
-        integrations=[
-            DjangoIntegration(),
-            CeleryIntegration(),
-        ],
-        traces_sample_rate=0.1,
-        send_default_pii=True,
-        environment=config('ENVIRONMENT', default='production'),
-    )
+# sentry_dsn = config('SENTRY_DSN', default=None)
+# if sentry_dsn:
+#     sentry_sdk.init(
+#         dsn=sentry_dsn,
+#         integrations=[
+#             DjangoIntegration(),
+#             CeleryIntegration(),
+#         ],
+#         traces_sample_rate=0.1,
+#         send_default_pii=True,
+#         environment=config('ENVIRONMENT', default='production'),
+#     )
 
 # -------------------------------------------------------------------
 # Email
