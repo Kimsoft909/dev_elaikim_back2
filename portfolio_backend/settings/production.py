@@ -83,6 +83,7 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@example.com')
 # -------------------------------------------------------------------
 # Template caching
 # -------------------------------------------------------------------
+TEMPLATES[0]['APP_DIRS'] = False
 TEMPLATES[0]['OPTIONS']['loaders'] = [
     (
         'django.template.loaders.cached.Loader',
