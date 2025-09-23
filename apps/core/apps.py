@@ -18,6 +18,11 @@ class CoreConfig(AppConfig):
         """
         # Only run in main process to avoid running during migrations
         import os
+        # Skip auto-execution during build process
+        if os.environ.get('SKIP_AUTO_SUPERUSER'):
+            logger.info('Skipping auto-superuser creation (build mode)')
+            return
+            
         if os.environ.get('RUN_MAIN') or os.environ.get('RENDER'):
             self.ensure_superuser()
     

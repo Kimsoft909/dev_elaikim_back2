@@ -3,6 +3,9 @@ set -e  # Exit on any error
 
 echo "🚀 Starting Django build process..."
 
+# Skip auto-superuser creation during build
+export SKIP_AUTO_SUPERUSER=true
+
 # Install Python dependencies
 echo "📦 Installing Python dependencies..."
 pip install -r requirements.txt
