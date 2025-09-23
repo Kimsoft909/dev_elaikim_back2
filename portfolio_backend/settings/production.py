@@ -79,9 +79,6 @@ DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@example.com')
 # -------------------------------------------------------------------
 # Logging
 # -------------------------------------------------------------------
-LOGGING['handlers']['file']['filename'] = '/var/log/portfolio_backend/django.log'
-LOGGING['root']['level'] = 'WARNING'
-LOGGING['loggers']['portfolio_backend']['level'] = 'INFO'
 
 # -------------------------------------------------------------------
 # Template caching

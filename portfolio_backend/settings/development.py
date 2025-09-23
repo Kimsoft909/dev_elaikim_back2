@@ -43,10 +43,6 @@ CACHES = {
 # Email backend for development
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
-# Logging - More verbose in development
-LOGGING['root']['level'] = 'DEBUG'
-LOGGING['loggers']['portfolio_backend']['level'] = 'DEBUG'
-
 
 # Create logs directory for development
 os.makedirs(BASE_DIR / 'logs', exist_ok=True)
