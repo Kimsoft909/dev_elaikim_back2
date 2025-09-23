@@ -57,3 +57,5 @@ ipython
 
 # System monitoring
 psutil
+# static files
+whitenoise
